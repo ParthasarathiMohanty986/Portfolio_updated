@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const textElement = document.getElementById('running-text');
     const textArray = [
-        "I am a MERN stack developer.",
-        "I am a data science enthusiast.",
-        "I am a content creator.",
-        "I am a designer."
+        "I am a MERN Stack Developer.",
+        " AI/ML enthusiast.",
+        "Content Creator & Designer.",
+        
     ];
     let index = 0;
     let charIndex = 0;
