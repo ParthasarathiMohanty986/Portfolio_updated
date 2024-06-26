@@ -1,0 +1,229 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Stylish font family */
+    background-color: #000; /* Space black color */
+    color: white;
+    padding-top: 60px; /* Add padding-top to create space above the content */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    position: relative; /* Ensure body has a position */
+}
+
+/* Space, stars, and meteoroids */
+.space {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    overflow: hidden;
+    z-index: -1; /* Ensure background is behind content */
+}
+
+.stars {
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    position: absolute;
+    z-index: 0; /* Ensure stars are behind content but above space */
+}
+
+.meteoroids {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Ensure meteoroids are behind content but above stars */
+}
+
+@keyframes meteoroid {
+    0% {
+        transform: translateY(-100%) translateX(-50%);
+    }
+    100% {
+        transform: translateY(100%) translateX(50%);
+    }
+}
+
+.meteoroid {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    animation: meteoroid 2s linear infinite;
+}
+
+.meteoroid:nth-child(1) {
+    top: 20%;
+    left: 25%;
+    animation-duration: 4s;
+    animation-delay: 0s;
+}
+
+.meteoroid:nth-child(2) {
+    top: 40%;
+    left: 50%;
+    animation-duration: 3s;
+    animation-delay: 1s;
+}
+
+.meteoroid:nth-child(3) {
+    top: 60%;
+    left: 75%;
+    animation-duration: 5s;
+    animation-delay: 2s;
+}
+
+.meteoroid:nth-child(4) {
+    top: 80%;
+    left: 30%;
+    animation-duration: 6s;
+    animation-delay: 3s;
+}
+
+header {
+    background-color: #111; /* Dark background for the navbar */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999; /* Ensure header is above other content */
+}
+
+.nav-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.main-content {
+    padding: 20px; /* Add padding to the main content area */
+}
+
+.about-me {
+    margin-bottom: 40px;
+    padding: 20px; /* Add padding inside the section */
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+}
+
+.profile-image {
+    width: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.resume-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.resume-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.running-text-container {
+    height: 40px; /* Adjust based on your text height */
+    overflow: hidden;
+    position: relative;
+}
+
+#running-text {
+    position: absolute;
+    white-space: nowrap;
+    animation: none;
+}
+
+.tech-stack {
+    margin-bottom: 40px;
+    padding: 20px; /* Add padding inside the section */
+    z-index: 1; /* Ensure tech-stack is above background */
+}
+
+.tech-icons img {
+    width: 50px;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out; /* Smooth transition on hover */
+}
+
+.tech-icons img:hover {
+    transform: scale(1.1); /* Scale up on hover */
+    filter: brightness(1.2); /* Brighten on hover */
+}
+
+.projects {
+    margin-bottom: 40px;
+    padding: 20px; /* Add padding inside the section */
+    z-index: 1; /* Ensure projects are above background */
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.project img {
+    width: 30px;
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out; /* Smooth transition on hover */
+}
+
+.project img:hover {
+    transform: scale(1.1); /* Scale up on hover */
+    filter: brightness(1.2); /* Brighten on hover */
+}
+
+.contact {
+    padding: 20px; /* Add padding inside the section */
+    z-index: 1; /* Ensure contact section is above background */
+}
+
+.contact-icons a {
+    margin-right: 10px;
+}
+
+.contact-icons img {
+    width: 30px;
+    transition: transform 0.3s ease-in-out; /* Smooth transition on hover */
+}
+
+.contact-icons img:hover {
+    transform: scale(1.1); /* Scale up on hover */
+    filter: brightness(1.2); /* Brighten on hover */
+}
