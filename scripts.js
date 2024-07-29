@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const textElement = document.getElementById('running-text');
     const textArray = [
-        "I am a MERN Stack Developer.",
-        " AI/ML enthusiast.",
+        "I am a Web Developer"
+        "Data Analyst.",
+        "Data science enthusiast.",
         "Content Creator & Designer.",
         
     ];
